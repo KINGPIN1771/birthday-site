@@ -20,11 +20,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Next.js
+      - name: Build Next.js (Static Export)
         run: npm run build
-
-      - name: Export static site
-        run: npm run export
 
       - name: Add .nojekyll file
         run: touch out/.nojekyll
@@ -34,5 +31,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          # Optionally keep history (set to true if you want previous deploys)
-          keep_files: false

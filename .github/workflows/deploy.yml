@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Next.js (Static Export)
+      - name: Build Next.js (static export)
         run: npm run build
 
       - name: Add .nojekyll file
